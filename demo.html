@@ -1,0 +1,290 @@
+<!--
+ * @Author: buuoltwo
+ * @Date: 2020-02-24 18:15:46
+ * @LastEditTime: 2020-03-02 22:22:38
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /oneslide/demo.html
+ -->
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>极简Markdown-PPT – 像呼吸一样轻松搞定你的演示文稿！</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- <link rel="stylesheet" href="css/theme/blood.css" id="theme"> -->
+
+    <!-- Menu using iconfont below... -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1761232_ya3257oxthm.css">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			// link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      if(window.location.search.match( /print-pdf/gi )) {
+        link.href = 'css/print/pdf.css'
+        window.print()
+      }else {
+        link.href = 'css/print/paper.css'
+      }
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+    <!-- img-loader:LeanCloud -->
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.5.3/dist/av-min.js"></script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+    <div class="control">
+      <span class="iconfont icon-setting"></span>
+    </div>
+    <div class="menu">
+      <!-- <div class="aside"> -->
+          <span class="iconfont icon-close"></span>
+        <div class="tab active"><span class="iconfont icon-editor"></span>编辑文本内容</div>
+        <div class="tab"><span class="iconfont icon-theme"></span>主题与动效</div>
+        <div class="tab download"><span class="iconfont icon-download"></span>下载PDF</div>
+        <div class="tab"><span class="iconfont icon-setting"></span>关于作者</div>
+      <!-- </div> -->
+      <!-- <div class="main"> -->
+        <div class="content active">
+          <div class="header">编辑</div>
+          <div class="body">
+            <textarea></textarea>
+            <input type="file" id="img-loader" accept="image/*">
+            <label for="img-loader" class="img-loader">点此上传jpg,png,bmp,gif(图片不超过2M)</label>
+            <button class="save">保存</button>
+          </div>
+        </div>
+				<div class="content">
+					<div class="header">主题特效</div>
+					<div class="body theme">
+						<h5>主题</h5>
+						<div class="themes">
+							<figure data-theme="beige">
+								<img src="./img/beige.png" alt="beige">
+								<figcaption>beige</figcaption>
+							</figure>
+							<figure data-theme="black">
+								<img src="./img/black.png" alt="black">
+								<figcaption>black</figcaption>
+							</figure>
+							<figure data-theme="blood">
+								<img src="./img/blood.png" alt="blood">
+								<figcaption>blood</figcaption>
+							</figure>
+							<figure data-theme="league">
+								<img src="./img/league.png" alt="league">
+								<figcaption>league</figcaption>
+							</figure>
+							<figure data-theme="moon">
+								<img src="./img/moon.png" alt="moon">
+								<figcaption>moon</figcaption>
+							</figure>
+							<figure data-theme="night">
+								<img src="./img/night.png" alt="night">
+								<figcaption>night</figcaption>
+							</figure>
+							<figure data-theme="serif">
+								<img src="./img/serif.png" alt="serif">
+								<figcaption>serif</figcaption>
+							</figure>
+							<figure data-theme="simple" >
+								<img src="./img/simple.png" alt="simple">
+								<figcaption>simple</figcaption>
+							</figure>
+							<figure data-theme="sky">
+								<img src="./img/sky.png" alt="sky">
+								<figcaption>sky</figcaption>
+							</figure>
+							<figure data-theme="solarized">
+								<img src="./img/solarized.png" alt="solarized">
+								<figcaption>solarized</figcaption>
+							</figure>
+							<figure data-theme="white">
+								<img src="./img/white.png" alt="white">
+								<figcaption>white</figcaption>
+							</figure>
+						</div>
+
+						<h5>转场</h5>
+						<select class="transition">
+							<option value="slide">滑动</option>
+							<option value="fade">淡化</option>
+							<option value="convex">凸出</option>
+							<option value="concave">凹陷</option>
+							<option value="zoom">缩放</option>
+							<option value="none">无</option>
+						</select>
+
+						<h5>对齐</h5>
+						<select class="align">
+							<option value="center">居中</option>
+							<option value="left-top">左上</option>
+						</select>
+					</div>					
+				</div>
+        <div class="content">
+          <div class="header">下载PDF</div>
+          <h5>铛铛新页面！Control + P 快捷键助你快速导出！</h5>
+        </div>
+        <div class="content">
+          <div class="header">buuoltwo©2020</div>
+          <div class="body">
+          </div>
+        </div>
+      </div>
+    </div>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+			</div>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+  <!-- <script>
+const isMain = s => (/^#{1,2}(?!#)/).test(s)
+const isSub =  s => (/^#{3}(?!#)/).test(s)
+const convert = raw => {
+  let arr = raw.split(/\n(?=\s*#)/).filter(s => s !== "").map(a => a.trim())
+  let html = ""
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i+1] !== undefined) {
+      if(isMain(arr[i]) && isMain(arr[i+1])) {
+        html +=`
+        <section data-markdown>
+          <textarea data-template>
+          ${arr[i]}
+          </textarea>
+        </section>
+        `
+      }
+      else if(isMain(arr[i]) && isSub(arr[i+1])) {
+        html +=`
+        <section>
+          <section data-markdown>
+            <textarea data-template>
+            ${arr[i]}
+            </textarea>
+          </section>
+        `
+      }
+      else if(isSub(arr[i]) && isSub(arr[i+1])) {
+        html +=`
+        <section data-markdown>
+          <textarea data-template>
+          ${arr[i]}
+          </textarea>
+        </section>
+        `
+      }
+      else if(isSub(arr[i]) && isMain(arr[i+1])) {
+        html +=`
+        <section data-markdown>
+          <textarea data-template>
+          ${arr[i]}
+          </textarea>
+        </section>
+      </section>
+        `
+      }
+    }
+    else{
+      if(isSub(arr[i])) {
+        html +=`
+        <section data-markdown>
+          <textarea data-template>
+          ${arr[i]}
+          </textarea>
+        </section>
+      </section>
+        `
+      }
+      else if(isMain(arr[i])) {
+        html +=`
+        <section data-markdown>
+          <textarea data-template>
+          ${arr[i]}
+          </textarea>
+        </section>
+        `
+      }
+
+    }
+  }
+  return html
+}
+function loadMarkdown(raw) {
+  localStorage.markdown = raw
+  location.reload()
+}
+function start() {
+  let TPL = `
+# One Slide
+- 朋友，快到碗里来！
+
+Markdown极简PPT项目基于reveal.js进行开发。
+
+## Trying!
+- 在页面顶端可以进入设置菜单>
+- 空格键让你不会错过子页面！
+
+### 我代表子页面
+
+### 更多功能请查看菜单指引！
+
+## 欢迎你的使用！
+buuoltwo©2020
+      `
+let html = convert(localStorage.markdown || TPL)
+console.log(html)
+document.querySelector(".slides").innerHTML = html
+// More info https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  center: true,
+  hash: true,
+
+  transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+  // More info https://github.com/hakimel/reveal.js#dependencies
+  dependencies: [
+    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js' },
+    { src: 'plugin/search/search.js', async: true },
+    { src: 'plugin/zoom-js/zoom.js', async: true },
+    { src: 'plugin/notes/notes.js', async: true }
+  ]
+});
+}
+start()
+  </script> -->
+  <script src="js/main.js"></script>
+	</body>
+</html>

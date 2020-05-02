@@ -1,0 +1,193 @@
+.control {
+  position: fixed;
+  width: 100vw;
+  height: 100px;
+  opacity: 0;
+  transition: opacity .3s;
+
+  z-index: 1;
+}
+.control .iconfont {
+  color: lightseagreen;
+  font-size: 40px;
+  display: inline-block;
+  margin: 25px 50px;
+  cursor: pointer;
+
+}
+.control:hover {
+  opacity: 1;
+}
+
+.menu {
+  
+  /* display: none; */
+  transform: translateX(-100%);
+  transition: transform .3s;
+
+  background-color: rgb(39, 46, 58);
+  position: absolute;
+  left: 0;
+  width: 180px;
+  height: 100vh;
+  padding-top: 50px;
+
+  z-index: 100;
+
+}
+.menu.open {
+
+  /* display: block; */
+  transform: translateX(0);
+
+}
+/* aside */
+.menu .icon-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: orangered;
+  cursor: pointer;
+  font-size: 25px;
+}
+.menu .tab {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 18px;
+  color: rgb(133, 130, 130);
+  cursor: pointer;
+}
+.menu .tab:hover {
+  color: lightseagreen;
+}
+.menu .tab.active {
+  color: whitesmoke;
+}
+.menu .tab .iconfont {
+  margin-right: 3px;
+}
+
+/* main */
+.menu .content{
+
+  /* display: none; */
+  transform: translateX(calc(100% + 180px));
+  transition: transform .3s;
+
+  background-color: rgb(33, 37, 43);;
+  position: absolute;
+  left: 180px;
+  top: 0;
+  width: calc(100vw - 180px);
+  height: 100vh;
+  color: #425351;
+/* 
+  z-index: 999; */
+
+  overflow: scroll;
+
+}
+.menu.open .content.active{
+
+  /* display: block; */
+  transform: translateX(0);
+
+}
+
+.menu .content .header {
+  font-size: 40px;
+  padding: 15px;
+  border-bottom: 2px solid #425351;
+}
+.content .body {
+  padding: 15px;
+}
+.content .body textarea {
+  width: 100%;
+  height: 400px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  margin-left: 5px;
+  outline: none;
+}
+.content .body [type="file"] {
+  display: none;
+}
+.content .body label.img-loader {
+  font-size: 12px;
+  display: block;
+  margin-top: 12px;
+  padding: 3px;
+  cursor: pointer;
+}
+.content .body label.img-loader:hover {
+  color: lightseagreen;
+}
+
+
+ button {
+  margin-top: 10px;
+  background-color: #6e6ecc;
+  padding: 6px 8px;
+  color: #f4f7f7;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  opacity: .7; 
+  cursor: pointer;
+
+  transition: opacity .3s;
+} 
+button:hover {
+  opacity: 1;
+}
+
+/* theme */
+.content h5 {
+  margin: 10px 5px;
+}
+
+.content .body.theme {
+  /* overflow: scroll; */
+  padding-bottom: 60px;
+}
+/* <figure data-theme="black">
+<img src="./img/black.png" alt="black">
+<figcaption>black</figcaption>
+</figure> */
+.content .body .themes img {
+  width: 200px;
+  height: 150px;
+}
+.content .body .themes {
+  display: flex;
+  flex-wrap: wrap;
+}
+.content .body .themes figure {
+  margin-right: 20px;
+  margin-top: 10px;
+  border: 2px solid transparent;
+  padding: 2px;
+  cursor: pointer;
+
+  opacity: .75;
+  transition: opacity .3s;
+}
+.content .body .themes figure.select {
+  border: 2px solid rgb(248, 159, 159);
+  opacity: 1;
+}
+.content .body .themes figure:hover {
+  border: 2px solid lightseagreen;
+  opacity: 1;
+}
+.content .body .themes figcaption {
+  padding: 5px;
+  text-align: center;
+}
+
+.reveal.left-top .slides{
+  text-align: left;
+}
